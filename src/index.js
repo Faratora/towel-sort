@@ -1,14 +1,14 @@
 module.exports = function towelSort(matrix) {
   if (!matrix || matrix.length === 0) return [];
-  const array = [];
+  const result = [];
   for (let i = 0; i < matrix.length; i += 1) {
-    let result;
+    let res;
     if (i % 2 === 0) {
-      result = matrix[i];
+      res = matrix[i];
     } else {
-      result = matrix[i].slice().reverse();
+      res = matrix[i].slice().reverse();
     }
-    array.push(result);
-}
-  return array;
-}
+    result.push(...res);
+  }
+  return result;
+};
